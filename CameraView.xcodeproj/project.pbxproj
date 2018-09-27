@@ -11,6 +11,7 @@
 		C3846908215CD3EF002E2220 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3846907215CD3EF002E2220 /* ViewController.swift */; };
 		C384690A215CD3F1002E2220 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3846909215CD3F1002E2220 /* Assets.xcassets */; };
 		C384690D215CD3F1002E2220 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C384690B215CD3F1002E2220 /* Main.storyboard */; };
+		C3846936215CE44C002E2220 /* PreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3846935215CE44C002E2220 /* PreviewView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		C384690C215CD3F1002E2220 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C384690E215CD3F1002E2220 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C384690F215CD3F1002E2220 /* CameraView.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CameraView.entitlements; sourceTree = "<group>"; };
+		C3846935215CE44C002E2220 /* PreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 			children = (
 				C3846905215CD3EF002E2220 /* AppDelegate.swift */,
 				C3846907215CD3EF002E2220 /* ViewController.swift */,
+				C3846935215CE44C002E2220 /* PreviewView.swift */,
 				C3846909215CD3F1002E2220 /* Assets.xcassets */,
 				C384690B215CD3F1002E2220 /* Main.storyboard */,
 				C384690E215CD3F1002E2220 /* Info.plist */,
@@ -95,6 +98,11 @@
 				TargetAttributes = {
 					C3846901215CD3EF002E2220 = {
 						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -135,6 +143,7 @@
 			files = (
 				C3846908215CD3EF002E2220 /* ViewController.swift in Sources */,
 				C3846906215CD3EF002E2220 /* AppDelegate.swift in Sources */,
+				C3846936215CE44C002E2220 /* PreviewView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
