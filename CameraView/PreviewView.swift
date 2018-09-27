@@ -13,15 +13,11 @@ class PreviewView: NSView {
 
     override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)
-//        self.layer = AVCaptureVideoPreviewLayer()
     }
-//    override var layer: CALayer? = {
-//        return AVCaptureVideoPreviewLayer.self
-//    }()
     
+    //MARK:- Views layer setup
     var videoPreviewLayer: AVCaptureVideoPreviewLayer {
         self.layer = AVCaptureVideoPreviewLayer()
         return self.layer as! AVCaptureVideoPreviewLayer
     }
-    
 }
