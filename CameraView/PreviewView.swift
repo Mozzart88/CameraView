@@ -20,4 +20,12 @@ class PreviewView: NSView {
         self.layer = AVCaptureVideoPreviewLayer()
         return self.layer as! AVCaptureVideoPreviewLayer
     }
+    override func mouseEntered(with event: NSEvent) {
+        if let window = window {
+            if !window.styleMask.contains(.titled) {
+                window.styleMask.insert(.titled)
+            }
+        }
+        print("Entered")
+    }
 }

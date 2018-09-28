@@ -52,8 +52,6 @@ class ViewController: NSViewController {
         // Start session
         self.captureSession.startRunning()
         
-        
-        
     }
     
     //MARK:- Set Window properties
@@ -68,6 +66,10 @@ class ViewController: NSViewController {
         view.window?.titleVisibility = .visible
         view.window?.title = "Camera View"
         view.window?.styleMask.insert(.fullSizeContentView)
+        
+        // Set traking area for window
+        let trakingArea = NSTrackingArea(rect: self.view.bounds, options: [.mouseEnteredAndExited,.activeAlways], owner: self, userInfo: nil)
+        self.view.addTrackingArea(trakingArea)
     }
     
     //MARK:- Create capture session
@@ -87,6 +89,21 @@ class ViewController: NSViewController {
                 window.styleMask.remove(.titled)
             } else {
                 window.styleMask.insert(.titled)
+            }
+        }
+    }
+    override func mouseEntered(with event: NSEvent) {
+        if let window = view.window {
+            let windowIsActive = NSApplication.shared.keyWindow != nil ? true : false
+            if !window.styleMask.contains(.titled) && windowIsActive {
+                window.styleMask.insert(.titled)
+            }
+        }
+    }
+    override func mouseExited(with event: NSEvent) {
+        if let window = view.window {
+            if window.styleMask.contains(.titled) {
+                window.styleMask.remove(.titled)
             }
         }
     }
